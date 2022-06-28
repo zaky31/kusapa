@@ -45,7 +45,7 @@ server <- function(input, output){
 #  },ignoreNULL = FALSE)
 #  output$table_chat <- renderDataTable(datatable(chat_fix(), selection = "none", extensions = "Responsive"), server = TRUE)
   #=== Streams data2====
-  load("chat_data.RData")
+  load("chat.rda")
   chat <- chat %>% drop_na(employee)
 #  chat_data <- eventReactive(input$update,{
 #    readxl::read_xlsx("data/chat.xlsx") %>% filter(!is.na(employee)) %>%
